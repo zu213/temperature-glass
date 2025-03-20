@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net48</TargetFramework>
+		<UseWindowsForms>true</UseWindowsForms>
+		<RuntimeIdentifier>win-x64</RuntimeIdentifier>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Reference Include="OpenHardwareMonitorLib">
+	    <HintPath>OpenHardwareMonitorLib.dll</HintPath>
+	  </Reference>
+	  <PackageReference Include="System.Management" Version="9.0.3" />
+	</ItemGroup>
+	<ItemGroup>
+	  <None Update="OpenHardwareMonitorLib.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
+</Project>
